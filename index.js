@@ -24,6 +24,9 @@ fetch('https://www.justcode.com/dataservice/api/paymentMethod/list')
           document.getElementById('customer').innerHTML = output
 
     })
-    .catch(err => console.log(err))
+    .catch(err => {
+        document.getElementById('customer').innerHTML = err.message
+
+    })
     
 };
